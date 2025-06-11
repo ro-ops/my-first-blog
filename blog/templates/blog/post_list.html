@@ -1,20 +1,21 @@
-<html>
+{% extends 'blog/base.html' %}
+{% block content %}
+<section class="hero">
+    <h1>Bienvenida a Brota</h1>
+    <p>Donde la tecnología y lo natural crecen juntas</p>
+    <a href="{% url 'tienda' %}" class="btn">Ver tienda</a>
+</section>
 
-<head>
-    <title>Brota</title>
-</head>
-<body>
-    <div>
-        <h1><a href="/">Brota Blog</a></h1>
-    </div>
-
+<section id="blog" class="blog-preview">
+    <h2>Últimos artículos</h2>
     {% for post in posts %}
-    <div>
-        <p> publicado: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
+        <div class="post-card">
+            <p class="date">Publicado: {{ post.published_date }}</p>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% empty %}
+        <p>No hay publicaciones aún.</p>
     {% endfor %}
-</body>
-
-</html>
+</section>
+{% endblock %}

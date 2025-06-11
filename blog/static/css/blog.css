@@ -1,0 +1,83 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f6;
+    color: #385e4c;
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #a8d5ba;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #385e4c;
+    font-weight: 500;
+}
+
+.hero {
+    text-align: center;
+    padding: 4em 2em;
+    background: url('/static/images/plantas.jpg') no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+.btn {
+    background-color: #385e4c;
+    color: white;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 3em 2em;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1em;
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button[type="submit"] {
+    background-color: #385e4c;
+    color: white;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #d4d4d4;
+    color: #385e4c;
+}
